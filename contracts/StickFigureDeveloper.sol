@@ -73,9 +73,6 @@ ERC721URIStorage, StickFigureDeveloperSvg, RandomHelper, HexColorHelper {
     }
 
     function generateRandomDeveloper(uint256 id) internal {
-        //uint256 id = developers.length;
-
-        //uint langNum = 
 
         developers.push(Developer(
             Iris(getRandomInt(0, 5, "iris")),
@@ -94,15 +91,6 @@ ERC721URIStorage, StickFigureDeveloperSvg, RandomHelper, HexColorHelper {
 
    
     function getShirtTextSvg(uint256 id) internal view returns (bytes memory) {
-        //bool isDark = developers[id].shirtColor.isDark;
-        // if i enable this check get large code error
-        // having trouble with stack size issues too
-        // if (developers[id].shirtColor.isDark) {
-        //     return abi.encodePacked(developers[id].is10x ? devTypeWhite10xSvg : devTypeWhiteSvg,
-        //     langBaseWhiteSvg, developers[id].language ,textClosingSvg,
-        //     devTextWhiteSvg);
-        // }
-
         //fixed large contract size errors by moving dark/light text to fill of g tag
         // and inlining the isDark check below with ?:
             return abi.encodePacked(developers[id].shirtColor.isDark ? lightTextSvg : darkTextSvg,
@@ -110,13 +98,11 @@ ERC721URIStorage, StickFigureDeveloperSvg, RandomHelper, HexColorHelper {
             langBaseSvg, developers[id].language ,textClosingSvg,
             devTextSvg);
         
-        
     }
 
 
     function buildFinalSvg(uint256 id) internal view returns (bytes memory) {
-        //string memory shirtText = string(getShirtTextSvg(id));
-        
+      
         return 
             abi.encodePacked(baseSvg, getShirtSvg(id), getBottomClothesSvg(id),headBaseSvg,
             getEyesSvg(id),"</g> ", getMouthSvg(id),getShirtTextSvg(id),
@@ -124,7 +110,6 @@ ERC721URIStorage, StickFigureDeveloperSvg, RandomHelper, HexColorHelper {
     }
 
     function getEyesSvg(uint256 id) internal view returns (string memory) { 
-
         return
             string(
                 abi.encodePacked(irisSvg[uint256(developers[id].eyeColor)],(developers[id].pupilSize == Pupils.HighAF ? pupilsHighAfSvg : pupilsNormalSvg)));
@@ -150,7 +135,7 @@ ERC721URIStorage, StickFigureDeveloperSvg, RandomHelper, HexColorHelper {
         string memory textColor = "#000";
         if (shirtColor.isDark) {
             textColor = "#fff";
-        }  // need to set text color elsewhere, here just use the random color of shirt
+        }
         return string(abi.encodePacked(shirtSvg, shirtColor.rgbColor, closeTagSvg));
     }
 
