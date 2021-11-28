@@ -9,6 +9,8 @@ The front end for this app is [here](https://github.com/jester7/stick-figure-dev
 
 To view a live demo of this project go to https://stick-figure-developers.netlify.app/
 
+![Screenshot of Stick Figure Developers website](https://stick-figure-developers.netlify.app/stick-figure-developers-preview.png)
+
 ## Usage
 
 To deploy locally and test:
