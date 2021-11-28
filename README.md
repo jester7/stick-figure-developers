@@ -9,6 +9,8 @@ The front end for this app is [here](https://github.com/jester7/stick-figure-dev
 
 To view a live demo of this project go to https://stick-figure-developers.netlify.app/
 
+[View sample collection on OpenSea](https://testnets.opensea.io/collection/stick-figure-developers-test-aosv2enpjs)
+
 ![Screenshot of Stick Figure Developers website](https://stick-figure-developers.netlify.app/stick-figure-developers-preview.png)
 
 ## Usage
