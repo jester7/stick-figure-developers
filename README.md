@@ -1,6 +1,6 @@
 ### Stick Figure Developers NFT learning project
 
-A Solidity/NFTs learning project done for [buildspace](https://buildspace.so/)).
+A Solidity/NFTs learning project done for [buildspace](https://buildspace.so/).
 
 The front end for this app is [here](https://github.com/jester7/stick-figure-developers-front-end).
 
